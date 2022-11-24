@@ -9,9 +9,15 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QApplication, QWidget, QMessageBox
+import sys
+from DataBase import DataBase
 
 
 class Ui_Dialog(object):
+    def __init__(self):
+        self.username = None
+        self.password = None
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(619, 452)
@@ -54,6 +60,11 @@ class Ui_Dialog(object):
         self.lineEdit_2.setObjectName("lineEdit_2")
 
         self.retranslateUi(Dialog)
+
+        # 自行增加按钮事件
+        self.pushButton.clicked.connect(self.click_login) # clicked函数里面有connect函数
+
+
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -63,3 +74,25 @@ class Ui_Dialog(object):
         self.pushButton.setText(_translate("Dialog", "登录"))
         self.label_2.setText(_translate("Dialog", "密码"))
         self.pushButton_2.setText(_translate("Dialog", "注册"))
+
+    def click_login(self):
+        self.username = self.lineEdit_2.text()
+        self.password = self.lineEdit.text()
+        print(f'用户为{self.username}, 密码为{self.password}')
+        cklogin = check_login(self.username, self.password)
+        if cklogin.is_in_mysql():
+            print(f'存在用户{self.username}，允许登录')
+        else:
+            print(f'不存在用户{self.username}，请重新输入')
+
+class check_login(object):
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+    def is_in_mysql(self):
+        db = DataBase()
+        db.connect_logindb()
+        if db.is_in_logindb(self.username, self.password):
+            return True
+        else :
+            return False
