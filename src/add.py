@@ -11,49 +11,70 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(452, 479)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_adduser(object):
+    def setupUi(self, adduser):
+        adduser.setObjectName("adduser")
+        adduser.resize(452, 442)
+        adduser.setStyleSheet("QLineEdit{\n"
+"    border:0px;    #去除边框\n"
+"    margin:10px;     #设置10像素的外框距\n"
+"    margin-left:50px;    #设置左边外框距50px\n"
+"    margin-right:50px;        #设置右边外框距50px，这样垂直分布可以居中\n"
+"    border-bottom: 2px solid #B3B3B3;     #显示下框线，且为2px像素宽度颜色为#B3B3B3\n"
+"    font-family:\'Microsoft YaHei\';     #设置字体\n"
+"    font-size:20px;     #字体大小\n"
+"    font-weight:bold;        #粗体\n"
+"    }")
+        self.centralwidget = QtWidgets.QWidget(adduser)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(80, 100, 71, 21))
         font = QtGui.QFont()
-        font.setFamily("Arial")
+        font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(80, 150, 41, 21))
         font = QtGui.QFont()
-        font.setFamily("Arial")
+        font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(80, 200, 81, 31))
+        self.label_3.setGeometry(QtCore.QRect(80, 200, 91, 31))
         font = QtGui.QFont()
-        font.setFamily("Arial")
+        font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(80, 250, 81, 21))
+        self.label_4.setGeometry(QtCore.QRect(80, 250, 91, 21))
         font = QtGui.QFont()
-        font.setFamily("Arial")
+        font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.label_4.setFont(font)
         self.label_4.setObjectName("label_4")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         self.label_5.setGeometry(QtCore.QRect(80, 300, 81, 21))
         font = QtGui.QFont()
-        font.setFamily("Arial")
+        font.setFamily("Microsoft YaHei")
         font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setGeometry(QtCore.QRect(180, 100, 161, 31))
+        self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_2.setGeometry(QtCore.QRect(180, 150, 161, 31))
@@ -66,6 +87,23 @@ class Ui_MainWindow(object):
         self.lineEdit_4.setObjectName("lineEdit_4")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(150, 380, 93, 28))
+        self.pushButton.setStyleSheet("QPushButton{\n"
+"    border:0px;\n"
+"    height:30px;\n"
+"    border-radius:15px;\n"
+"    font-family:\'Microsoft YaHei\';\n"
+"    font-size:20px;\n"
+"    color:white;\n"
+"    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #fbc2eb, stop:1 #a6c1ee);\n"
+"    }\n"
+"\n"
+" QPushButton:hover{\n"
+"     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #ffd2f0, stop:1 #b0cbf8);\n"
+" }\n"
+"\n"
+" QPushButton:pressed{\n"
+"     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #e1aad2, stop:1 #92adda);\n"
+"     }")
         self.pushButton.setObjectName("pushButton")
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
         self.comboBox.setGeometry(QtCore.QRect(210, 300, 87, 22))
@@ -77,25 +115,88 @@ class Ui_MainWindow(object):
         self.comboBox.addItem("")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(270, 380, 93, 28))
+        self.pushButton_2.setStyleSheet("QPushButton{\n"
+"    border:0px;\n"
+"    height:30px;\n"
+"    border-radius:15px;\n"
+"    font-family:\'Microsoft YaHei\';\n"
+"    font-size:20px;\n"
+"    color:white;\n"
+"    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #fbc2eb, stop:1 #a6c1ee);\n"
+"    }\n"
+"\n"
+" QPushButton:hover{\n"
+"     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #ffd2f0, stop:1 #b0cbf8);\n"
+" }\n"
+"\n"
+" QPushButton:pressed{\n"
+"     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #e1aad2, stop:1 #92adda);\n"
+"     }")
         self.pushButton_2.setObjectName("pushButton_2")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.hidden_pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.hidden_pushButton.setGeometry(QtCore.QRect(390, 10, 20, 20))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.hidden_pushButton.sizePolicy().hasHeightForWidth())
+        self.hidden_pushButton.setSizePolicy(sizePolicy)
+        self.hidden_pushButton.setMinimumSize(QtCore.QSize(20, 20))
+        self.hidden_pushButton.setMaximumSize(QtCore.QSize(20, 20))
+        self.hidden_pushButton.setBaseSize(QtCore.QSize(0, 0))
+        self.hidden_pushButton.setStyleSheet("QPushButton\n"
+"{\n"
+"background:#FFDF80;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"background:#FFC105;\n"
+"}\n"
+"\n"
+"")
+        self.hidden_pushButton.setText("")
+        self.hidden_pushButton.setObjectName("hidden_pushButton")
+        self.close_pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.close_pushButton.setEnabled(True)
+        self.close_pushButton.setGeometry(QtCore.QRect(420, 10, 20, 20))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.close_pushButton.sizePolicy().hasHeightForWidth())
+        self.close_pushButton.setSizePolicy(sizePolicy)
+        self.close_pushButton.setMinimumSize(QtCore.QSize(20, 20))
+        self.close_pushButton.setMaximumSize(QtCore.QSize(20, 20))
+        self.close_pushButton.setStyleSheet("QPushButton\n"
+"{\n"
+"background:#FF6694;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"background:#FF0000;\n"
+"}\n"
+"\n"
+"")
+        self.close_pushButton.setText("")
+        self.close_pushButton.setObjectName("close_pushButton")
+        adduser.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(adduser)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        adduser.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(adduser)
+        QtCore.QMetaObject.connectSlotsByName(adduser)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, adduser):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "职工号"))
-        self.label_2.setText(_translate("MainWindow", "姓名"))
-        self.label_3.setText(_translate("MainWindow", "身份证号"))
-        self.label_4.setText(_translate("MainWindow", "电话号码"))
-        self.label_5.setText(_translate("MainWindow", "部门编号"))
-        self.pushButton.setText(_translate("MainWindow", "添加"))
-        self.comboBox.setItemText(1, _translate("MainWindow", "1"))
-        self.comboBox.setItemText(2, _translate("MainWindow", "2"))
-        self.comboBox.setItemText(3, _translate("MainWindow", "3"))
-        self.pushButton_2.setText(_translate("MainWindow", "取消"))
+        adduser.setWindowTitle(_translate("adduser", "MainWindow"))
+        self.label.setText(_translate("adduser", "职工号"))
+        self.label_2.setText(_translate("adduser", "姓名"))
+        self.label_3.setText(_translate("adduser", "身份证号"))
+        self.label_4.setText(_translate("adduser", "电话号码"))
+        self.label_5.setText(_translate("adduser", "部门编号"))
+        self.pushButton.setText(_translate("adduser", "添加"))
+        self.comboBox.setItemText(1, _translate("adduser", "1"))
+        self.comboBox.setItemText(2, _translate("adduser", "2"))
+        self.comboBox.setItemText(3, _translate("adduser", "3"))
+        self.pushButton_2.setText(_translate("adduser", "取消"))

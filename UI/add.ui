@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>adduser</class>
+ <widget class="QMainWindow" name="adduser">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>452</width>
-    <height>479</height>
+    <height>442</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit{
+    border:0px;    #去除边框
+    margin:10px; 	#设置10像素的外框距
+	margin-left:50px;    #设置左边外框距50px
+	margin-right:50px;		#设置右边外框距50px，这样垂直分布可以居中
+    border-bottom: 2px solid #B3B3B3; 	#显示下框线，且为2px像素宽度颜色为#B3B3B3
+    font-family:'Microsoft YaHei'; 	#设置字体
+    font-size:20px; 	#字体大小
+    font-weight:bold;		#粗体
+    }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -25,8 +37,10 @@
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Microsoft YaHei</family>
       <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -44,8 +58,10 @@
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Microsoft YaHei</family>
       <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -57,14 +73,16 @@
      <rect>
       <x>80</x>
       <y>200</y>
-      <width>81</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Microsoft YaHei</family>
       <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -76,14 +94,16 @@
      <rect>
       <x>80</x>
       <y>250</y>
-      <width>81</width>
+      <width>91</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Microsoft YaHei</family>
       <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -101,8 +121,10 @@
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Microsoft YaHei</family>
       <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -117,6 +139,9 @@
       <width>161</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
@@ -157,6 +182,25 @@
       <width>93</width>
       <height>28</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    border:0px;
+    height:30px;
+    border-radius:15px;
+    font-family:'Microsoft YaHei';
+    font-size:20px;
+	color:white;
+    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #fbc2eb, stop:1 #a6c1ee);
+    }
+
+ QPushButton:hover{
+     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #ffd2f0, stop:1 #b0cbf8);
+ }
+
+ QPushButton:pressed{
+     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #e1aad2, stop:1 #92adda);
+     }</string>
     </property>
     <property name="text">
      <string>添加</string>
@@ -201,8 +245,124 @@
       <height>28</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+    border:0px;
+    height:30px;
+    border-radius:15px;
+    font-family:'Microsoft YaHei';
+    font-size:20px;
+	color:white;
+    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #fbc2eb, stop:1 #a6c1ee);
+    }
+
+ QPushButton:hover{
+     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #ffd2f0, stop:1 #b0cbf8);
+ }
+
+ QPushButton:pressed{
+     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #e1aad2, stop:1 #92adda);
+     }</string>
+    </property>
     <property name="text">
      <string>取消</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="hidden_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>10</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background:#FFDF80;
+border-radius:10px;
+}
+QPushButton:hover
+{
+background:#FFC105;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="close_pushButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background:#FF6694;
+border-radius:10px;
+}
+QPushButton:hover
+{
+background:#FF0000;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
