@@ -14,192 +14,184 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(679, 481)
-        MainWindow.setStyleSheet("QLineEdit{\n"
-"    border:0px;\n"
-"    margin:10px;\n"
-"    margin-left:10px;\n"
-"    margin-right:10px;\n"
-"    border-bottom: 2px solid #B3B3B3;\n"
-"    font-family:\'Microsoft YaHei\';\n"
-"    font-size:20px;\n"
-"    font-weight:bold;\n"
-"    }\n"
-"\n"
-"QLineEdit:hover{\n"
-"    border-bottom: 3px solid #66A3FF;\n"
-"    }\n"
-"\n"
-"QLineEdit:focus{\n"
-"    border-bottom: 3px solid #E680BD;\n"
-"    }\n"
-"\n"
-"QWidget#centralwidget{\n"
-"    background:white;\n"
-"    border-radius:10px;\n"
-"}\n"
-"\n"
-"QLabel{\n"
-"    text-align:right;\n"
-"    font-family:\'Microsoft YaHei\';\n"
-"    font-size:30px;\n"
-"    font-weight:bold;\n"
-"    }\n"
-"\n"
-"")
+        MainWindow.resize(368, 449)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
-        self.centralwidget.setSizePolicy(sizePolicy)
+        self.centralwidget.setStyleSheet("\n"
+"border-top-left-radius:30px;\n"
+"border-bottom-left-radius:30px;\n"
+"border-top-right-radius:30px;\n"
+"border-bottom-right-radius:30px\n"
+"")
         self.centralwidget.setObjectName("centralwidget")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.widget = QtWidgets.QWidget(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.widget.sizePolicy().hasHeightForWidth())
-        self.widget.setSizePolicy(sizePolicy)
-        self.widget.setLayoutDirection(QtCore.Qt.RightToLeft)
-        self.widget.setObjectName("widget")
-        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.widget)
-        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_3.setSpacing(5)
-        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        self.close_pushButton = QtWidgets.QPushButton(self.widget)
-        self.close_pushButton.setEnabled(True)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.close_pushButton.sizePolicy().hasHeightForWidth())
-        self.close_pushButton.setSizePolicy(sizePolicy)
-        self.close_pushButton.setMinimumSize(QtCore.QSize(20, 20))
-        self.close_pushButton.setMaximumSize(QtCore.QSize(20, 20))
-        self.close_pushButton.setStyleSheet("QPushButton\n"
-"{\n"
-"background:#FF6694;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover\n"
-"{\n"
-"background:#FF0000;\n"
-"}\n"
+        self.frame = QtWidgets.QFrame(self.centralwidget)
+        self.frame.setGeometry(QtCore.QRect(10, 10, 351, 391))
+        self.frame.setStyleSheet("border:none;     \n"
+"border: 2px solid rgb(255, 255, 255);   /* 添加2px的白色框 */\n"
+"width: 100px;    \n"
+"height: 30px;     \n"
 "\n"
+"background-color: rgb(52, 52, 52);  \n"
 "")
-        self.close_pushButton.setText("")
-        self.close_pushButton.setObjectName("close_pushButton")
-        self.horizontalLayout_3.addWidget(self.close_pushButton)
-        self.hidden_pushButton = QtWidgets.QPushButton(self.widget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.hidden_pushButton.sizePolicy().hasHeightForWidth())
-        self.hidden_pushButton.setSizePolicy(sizePolicy)
-        self.hidden_pushButton.setMinimumSize(QtCore.QSize(20, 20))
-        self.hidden_pushButton.setMaximumSize(QtCore.QSize(20, 20))
-        self.hidden_pushButton.setBaseSize(QtCore.QSize(0, 0))
-        self.hidden_pushButton.setStyleSheet("QPushButton\n"
-"{\n"
-"background:#FFDF80;\n"
-"border-radius:10px;\n"
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.button_login = QtWidgets.QPushButton(self.frame)
+        self.button_login.setGeometry(QtCore.QRect(90, 300, 161, 41))
+        self.button_login.setStyleSheet("QPushButton{\n"
+"    font: 20pt \"微软雅黑\";\n"
+"    \n"
+"    background-color: rgb(0, 0, 0);\n"
+"    color: rgb(255, 255, 255);\n"
+"    border: 3px solid rgb(0,0,0);\n"
+"    border-radius:10px\n"
 "}\n"
-"QPushButton:hover\n"
-"{\n"
-"background:#FFC105;\n"
+"QPushButton:hover{\n"
+"    \n"
+"    color: rgb(0, 0, 0);\n"
+"    background-color: rgb(255, 255, 255);\n"
 "}\n"
-"\n"
+"QPushButton:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px\n"
+"}\n"
 "")
-        self.hidden_pushButton.setText("")
-        self.hidden_pushButton.setObjectName("hidden_pushButton")
-        self.horizontalLayout_3.addWidget(self.hidden_pushButton)
-        self.verticalLayout.addWidget(self.widget)
-        self.widget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_2.setObjectName("widget_2")
-        self.gridLayout = QtWidgets.QGridLayout(self.widget_2)
-        self.gridLayout.setObjectName("gridLayout")
-        self.user_lineEdit = QtWidgets.QLineEdit(self.widget_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.user_lineEdit.sizePolicy().hasHeightForWidth())
-        self.user_lineEdit.setSizePolicy(sizePolicy)
-        self.user_lineEdit.setInputMask("")
-        self.user_lineEdit.setText("")
-        self.user_lineEdit.setObjectName("user_lineEdit")
-        self.gridLayout.addWidget(self.user_lineEdit, 1, 1, 1, 1)
-        self.password_lineEdit = QtWidgets.QLineEdit(self.widget_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.password_lineEdit.sizePolicy().hasHeightForWidth())
-        self.password_lineEdit.setSizePolicy(sizePolicy)
-        self.password_lineEdit.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.password_lineEdit.setObjectName("password_lineEdit")
-        self.gridLayout.addWidget(self.password_lineEdit, 2, 1, 1, 1)
-        self.label = QtWidgets.QLabel(self.widget_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy)
-        self.label.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        self.label.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.button_login.setObjectName("button_login")
+        self.label = QtWidgets.QLabel(self.frame)
+        self.label.setGeometry(QtCore.QRect(40, 170, 91, 31))
+        self.label.setStyleSheet("font: 12pt \"微软雅黑\";\n"
+"border-color:rgb(52, 52, 52);")
         self.label.setObjectName("label")
-        self.gridLayout.addWidget(self.label, 0, 1, 1, 1)
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem)
-        self.login_pushButton = QtWidgets.QPushButton(self.widget_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.login_pushButton.sizePolicy().hasHeightForWidth())
-        self.login_pushButton.setSizePolicy(sizePolicy)
-        self.login_pushButton.setMaximumSize(QtCore.QSize(16777215, 30))
-        self.login_pushButton.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.login_pushButton.setStyleSheet("QPushButton{\n"
-"    border:0px;\n"
-"    height:30px;\n"
-"    border-radius:15px;\n"
-"    font-family:\'Microsoft YaHei\';\n"
-"    font-size:20px;\n"
-"    color:white;\n"
-"    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #fbc2eb, stop:1 #a6c1ee);\n"
-"    }\n"
-"\n"
-" QPushButton:hover{\n"
-"     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #ffd2f0, stop:1 #b0cbf8);\n"
-" }\n"
-"\n"
-" QPushButton:pressed{\n"
-"     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #e1aad2, stop:1 #92adda);\n"
-"     }")
-        self.login_pushButton.setFlat(False)
-        self.login_pushButton.setObjectName("login_pushButton")
-        self.horizontalLayout.addWidget(self.login_pushButton)
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem1)
-        self.gridLayout.addLayout(self.horizontalLayout, 3, 1, 1, 1)
-        spacerItem2 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem2, 2, 0, 1, 1)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem3, 2, 2, 1, 1)
-        self.verticalLayout.addWidget(self.widget_2)
-        self.verticalLayout.setStretch(1, 1)
+        self.user_lineEdit = QtWidgets.QLineEdit(self.frame)
+        self.user_lineEdit.setGeometry(QtCore.QRect(140, 170, 161, 31))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(52, 52, 52))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Text, brush)
+        brush = QtGui.QBrush(QtGui.QColor(52, 52, 52))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(52, 52, 52))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 128))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.PlaceholderText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(52, 52, 52))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Text, brush)
+        brush = QtGui.QBrush(QtGui.QColor(52, 52, 52))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(52, 52, 52))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255, 128))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.PlaceholderText, brush)
+        brush = QtGui.QBrush(QtGui.QColor(52, 52, 52))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(120, 120, 120))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Text, brush)
+        brush = QtGui.QBrush(QtGui.QColor(52, 52, 52))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(52, 52, 52))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.PlaceholderText, brush)
+        self.user_lineEdit.setPalette(palette)
+        self.user_lineEdit.setStyleSheet("border:2px solid rgb(186,186,186);\n"
+"border-radius:10px\n"
+"")
+        self.user_lineEdit.setText("")
+        self.user_lineEdit.setClearButtonEnabled(True)
+        self.user_lineEdit.setObjectName("user_lineEdit")
+        self.password_lineEdit = QtWidgets.QLineEdit(self.frame)
+        self.password_lineEdit.setGeometry(QtCore.QRect(140, 220, 161, 31))
+        self.password_lineEdit.setStyleSheet("border:2px solid rgb(186,186,186);\n"
+"border-radius:10px\n"
+"")
+        self.password_lineEdit.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.password_lineEdit.setClearButtonEnabled(True)
+        self.password_lineEdit.setObjectName("password_lineEdit")
+        self.label_2 = QtWidgets.QLabel(self.frame)
+        self.label_2.setGeometry(QtCore.QRect(40, 220, 101, 31))
+        self.label_2.setStyleSheet("font: 12pt \"微软雅黑\";\n"
+"border-color:rgb(52, 52, 52);")
+        self.label_2.setObjectName("label_2")
+        self.label_4 = QtWidgets.QLabel(self.frame)
+        self.label_4.setGeometry(QtCore.QRect(60, 40, 241, 91))
+        self.label_4.setStyleSheet("font: 20pt \"微软雅黑\";\n"
+"border-color:rgb(52, 52, 52)")
+        self.label_4.setObjectName("label_4")
+        self.button_hidden = QtWidgets.QPushButton(self.frame)
+        self.button_hidden.setGeometry(QtCore.QRect(280, 10, 31, 31))
+        self.button_hidden.setStyleSheet("QPushButton{\n"
+"    font: 20pt \"微软雅黑\";\n"
+"    \n"
+"    background-color:  rgb(52, 52, 52);\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-color: rgb(52, 52, 52);\n"
+"}\n"
+"QPushButton:hover{\n"
+"    \n"
+"    color: rgb(0, 0, 0);\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px\n"
+"}\n"
+"")
+        self.button_hidden.setObjectName("button_hidden")
+        self.button_close = QtWidgets.QPushButton(self.frame)
+        self.button_close.setGeometry(QtCore.QRect(310, 10, 31, 31))
+        self.button_close.setStyleSheet("QPushButton{\n"
+"    font: 20pt \"微软雅黑\";\n"
+"    \n"
+"    background-color:  rgb(52, 52, 52);\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-color: rgb(52, 52, 52);\n"
+"}\n"
+"QPushButton:hover{\n"
+"    \n"
+"    color: rgb(0, 0, 0);\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px\n"
+"}\n"
+"")
+        self.button_close.setObjectName("button_close")
         MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 368, 26))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "登录程序"))
-        self.user_lineEdit.setPlaceholderText(_translate("MainWindow", "用户名"))
-        self.password_lineEdit.setPlaceholderText(_translate("MainWindow", "密码"))
-        self.label.setText(_translate("MainWindow", "员工管理系统"))
-        self.login_pushButton.setText(_translate("MainWindow", "登录"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.button_login.setText(_translate("MainWindow", "登录"))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#bababa;\">用户账号</span></p></body></html>"))
+        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#bababa;\">用户密码</span></p></body></html>"))
+        self.label_4.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" color:#ffffff;\">登录界面</span></p></body></html>"))
+        self.button_hidden.setText(_translate("MainWindow", "－"))
+        self.button_close.setText(_translate("MainWindow", "×"))

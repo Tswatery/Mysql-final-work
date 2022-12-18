@@ -6,353 +6,394 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>679</width>
-    <height>481</height>
+    <width>368</width>
+    <height>449</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>登录程序</string>
-  </property>
-  <property name="styleSheet">
-   <string notr="true">QLineEdit{
-    border:0px;
-    margin:10px;
-	margin-left:10px;
-	margin-right:10px;
-    border-bottom: 2px solid #B3B3B3;
-    font-family:'Microsoft YaHei';
-    font-size:20px;
-    font-weight:bold;
-    }
-
-QLineEdit:hover{
-    border-bottom: 3px solid #66A3FF;
-    }
-
-QLineEdit:focus{
-    border-bottom: 3px solid #E680BD;
-    }
-
-QWidget#centralwidget{
-	background:white;
-	border-radius:10px;
-}
-
-QLabel{
-    text-align:right;
-    font-family:'Microsoft YaHei';
-    font-size:30px;
-    font-weight:bold;
-    }
-
-</string>
+   <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
+   <property name="styleSheet">
+    <string notr="true">
+border-top-left-radius:30px;
+border-bottom-left-radius:30px;
+border-top-right-radius:30px;
+border-bottom-right-radius:30px
+</string>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
-    <item>
-     <widget class="QWidget" name="widget" native="true">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::RightToLeft</enum>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <property name="spacing">
-        <number>5</number>
-       </property>
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QPushButton" name="close_pushButton">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton
-{
-background:#FF6694;
-border-radius:10px;
-}
-QPushButton:hover
-{
-background:#FF0000;
-}
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>351</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none;     
+border: 2px solid rgb(255, 255, 255);   /* 添加2px的白色框 */
+width: 100px;    
+height: 30px;     
 
+background-color: rgb(52, 52, 52);  
 </string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="hidden_pushButton">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="baseSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton
-{
-background:#FFDF80;
-border-radius:10px;
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="button_login">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>300</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	font: 20pt &quot;微软雅黑&quot;;
+	
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	border: 3px solid rgb(0,0,0);
+	border-radius:10px
 }
-QPushButton:hover
-{
-background:#FFC105;
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
 }
-
+QPushButton:pressed{
+	padding-top:3px;
+	padding-left:3px
+}
 </string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QWidget" name="widget_2" native="true">
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="user_lineEdit">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="inputMask">
-          <string/>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="placeholderText">
-          <string>用户名</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="password_lineEdit">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
-         </property>
-         <property name="placeholderText">
-          <string>密码</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="label">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
-         </property>
-         <property name="text">
-          <string>员工管理系统</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <property name="sizeConstraint">
-          <enum>QLayout::SetDefaultConstraint</enum>
-         </property>
-         <item>
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Maximum</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="login_pushButton">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton{
-    border:0px;
-    height:30px;
-    border-radius:15px;
-    font-family:'Microsoft YaHei';
-    font-size:20px;
-	color:white;
-    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #fbc2eb, stop:1 #a6c1ee);
-    }
-
- QPushButton:hover{
-     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #ffd2f0, stop:1 #b0cbf8);
- }
-
- QPushButton:pressed{
-     background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #e1aad2, stop:1 #92adda);
-     }</string>
-           </property>
-           <property name="text">
-            <string>登录</string>
-           </property>
-           <property name="flat">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Maximum</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </item>
-       <item row="2" column="0">
-        <spacer name="horizontalSpacer_3">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Maximum</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="2" column="2">
-        <spacer name="horizontalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Maximum</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </widget>
-    </item>
-   </layout>
+     </property>
+     <property name="text">
+      <string>登录</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>170</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-color:rgb(52, 52, 52);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#bababa;&quot;&gt;用户账号&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="user_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>170</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>52</red>
+           <green>52</green>
+           <blue>52</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>52</red>
+           <green>52</green>
+           <blue>52</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>52</red>
+           <green>52</green>
+           <blue>52</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>52</red>
+           <green>52</green>
+           <blue>52</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>52</red>
+           <green>52</green>
+           <blue>52</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>52</red>
+           <green>52</green>
+           <blue>52</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>52</red>
+           <green>52</green>
+           <blue>52</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>120</red>
+           <green>120</green>
+           <blue>120</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>52</red>
+           <green>52</green>
+           <blue>52</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>52</red>
+           <green>52</green>
+           <blue>52</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(186,186,186);
+border-radius:10px
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>220</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(186,186,186);
+border-radius:10px
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>220</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-color:rgb(52, 52, 52);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#bababa;&quot;&gt;用户密码&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>241</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;微软雅黑&quot;;
+border-color:rgb(52, 52, 52)</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;登录界面&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_hidden">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>10</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	font: 20pt &quot;微软雅黑&quot;;
+	
+	background-color:  rgb(52, 52, 52);
+	color: rgb(255, 255, 255);
+	border-color: rgb(52, 52, 52);
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+}
+QPushButton:pressed{
+	padding-top:3px;
+	padding-left:3px
+}
+</string>
+     </property>
+     <property name="text">
+      <string>－</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_close">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>10</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	font: 20pt &quot;微软雅黑&quot;;
+	
+	background-color:  rgb(52, 52, 52);
+	color: rgb(255, 255, 255);
+	border-color: rgb(52, 52, 52);
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+}
+QPushButton:pressed{
+	padding-top:3px;
+	padding-left:3px
+}
+</string>
+     </property>
+     <property name="text">
+      <string>×</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>368</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
