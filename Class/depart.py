@@ -62,7 +62,6 @@ class Department_Window(QMainWindow,Ui_MainWindow):
         sql = 'select * from department where dep_number = %s and dep_name = %s'
         cursor.execute(sql, (departno, departname))
         res = cursor.fetchall()
-        # print(res)
         if res:
             QMessageBox.information(self, '提示', f'存在名称为{departname}，编号为{departno}的部门')
             print(res)
@@ -102,9 +101,9 @@ class Department_Window(QMainWindow,Ui_MainWindow):
         departno, departname = int(self.departno.text()), self.departname.text()
         print(f'删除部门中，departno为{departno}, 类型为{type(departno)}, departname为{departname}')
         cursor = self.Mysql.conn_employ.cursor()
-        sql = 'delete from department where dep_name = %s and dep_number = %s'
+        sql = 'delete from department where dep_name = %s and dep_number =' + str(int(departno))
         try:
-            cursor.execute(sql, (departno, departname))
+            cursor.execute(sql, (departname, ))
         except pymysql.Error as e:
             print(e)
             QMessageBox.information(self, '提示', f'删除失败 不存编号为{departno}，名称为{departname}的部门')
