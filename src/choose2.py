@@ -14,11 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1115, 785)
+        MainWindow.resize(375, 654)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(10, 20, 1101, 621))
+        self.frame.setGeometry(QtCore.QRect(0, 0, 371, 611))
         self.frame.setStyleSheet("border:none;     \n"
 "border: 2px solid rgb(255, 255, 255);   /* 添加2px的白色框 */\n"
 "width: 100px;    \n"
@@ -30,12 +30,12 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.label_4 = QtWidgets.QLabel(self.frame)
-        self.label_4.setGeometry(QtCore.QRect(30, 40, 291, 61))
+        self.label_4.setGeometry(QtCore.QRect(40, 40, 291, 61))
         self.label_4.setStyleSheet("font: 20pt \"微软雅黑\";\n"
 "border-color:rgb(52, 52, 52)")
         self.label_4.setObjectName("label_4")
         self.hidden_button = QtWidgets.QPushButton(self.frame)
-        self.hidden_button.setGeometry(QtCore.QRect(1030, 10, 31, 31))
+        self.hidden_button.setGeometry(QtCore.QRect(290, 10, 31, 31))
         self.hidden_button.setStyleSheet("QPushButton{\n"
 "    font: 20pt \"微软雅黑\";\n"
 "    \n"
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
 "")
         self.hidden_button.setObjectName("hidden_button")
         self.close_button = QtWidgets.QPushButton(self.frame)
-        self.close_button.setGeometry(QtCore.QRect(1060, 10, 31, 31))
+        self.close_button.setGeometry(QtCore.QRect(330, 10, 31, 31))
         self.close_button.setStyleSheet("QPushButton{\n"
 "    font: 20pt \"微软雅黑\";\n"
 "    \n"
@@ -74,11 +74,8 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.close_button.setObjectName("close_button")
-        self.tableView = QtWidgets.QTableView(self.frame)
-        self.tableView.setGeometry(QtCore.QRect(330, 50, 741, 531))
-        self.tableView.setObjectName("tableView")
         self.depart = QtWidgets.QPushButton(self.frame)
-        self.depart.setGeometry(QtCore.QRect(70, 120, 191, 61))
+        self.depart.setGeometry(QtCore.QRect(90, 120, 191, 61))
         self.depart.setStyleSheet("QPushButton{\n"
 "    font: 20pt \"微软雅黑\";\n"
 "    \n"
@@ -99,7 +96,7 @@ class Ui_MainWindow(object):
 "")
         self.depart.setObjectName("depart")
         self.employee = QtWidgets.QPushButton(self.frame)
-        self.employee.setGeometry(QtCore.QRect(70, 220, 191, 61))
+        self.employee.setGeometry(QtCore.QRect(90, 220, 191, 61))
         self.employee.setStyleSheet("QPushButton{\n"
 "    font: 20pt \"微软雅黑\";\n"
 "    \n"
@@ -120,7 +117,7 @@ class Ui_MainWindow(object):
 "")
         self.employee.setObjectName("employee")
         self.attandance = QtWidgets.QPushButton(self.frame)
-        self.attandance.setGeometry(QtCore.QRect(70, 320, 191, 61))
+        self.attandance.setGeometry(QtCore.QRect(90, 320, 191, 61))
         self.attandance.setStyleSheet("QPushButton{\n"
 "    font: 20pt \"微软雅黑\";\n"
 "    \n"
@@ -141,7 +138,7 @@ class Ui_MainWindow(object):
 "")
         self.attandance.setObjectName("attandance")
         self.leave = QtWidgets.QPushButton(self.frame)
-        self.leave.setGeometry(QtCore.QRect(70, 420, 191, 61))
+        self.leave.setGeometry(QtCore.QRect(90, 420, 191, 61))
         self.leave.setStyleSheet("QPushButton{\n"
 "    font: 20pt \"微软雅黑\";\n"
 "    \n"
@@ -162,7 +159,7 @@ class Ui_MainWindow(object):
 "")
         self.leave.setObjectName("leave")
         self.salary = QtWidgets.QPushButton(self.frame)
-        self.salary.setGeometry(QtCore.QRect(70, 520, 191, 61))
+        self.salary.setGeometry(QtCore.QRect(90, 520, 191, 61))
         self.salary.setStyleSheet("QPushButton{\n"
 "    font: 20pt \"微软雅黑\";\n"
 "    \n"
@@ -184,7 +181,7 @@ class Ui_MainWindow(object):
         self.salary.setObjectName("salary")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1115, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 375, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)

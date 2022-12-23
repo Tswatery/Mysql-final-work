@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1116</width>
-    <height>735</height>
+    <width>1146</width>
+    <height>760</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,9 +41,9 @@ background-color: rgb(52, 52, 52);
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>20</x>
        <y>100</y>
-       <width>71</width>
+       <width>91</width>
        <height>31</height>
       </rect>
      </property>
@@ -55,7 +55,7 @@ border-color:rgb(52, 52, 52);</string>
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#00aaff;&quot;&gt;出勤月份&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="Month">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -71,6 +71,9 @@ color:rgb(186,186,186);</string>
      </property>
      <property name="text">
       <string/>
+     </property>
+     <property name="placeholderText">
+      <string>必填</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
@@ -90,7 +93,7 @@ border-color:rgb(52, 52, 52)</string>
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;出勤信息&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="hidden_button">
      <property name="geometry">
       <rect>
        <x>1030</x>
@@ -122,7 +125,7 @@ QPushButton:pressed{
       <string>－</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="close_button">
      <property name="geometry">
       <rect>
        <x>1060</x>
@@ -164,10 +167,18 @@ QPushButton:pressed{
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">    color: black;                                       /*表格内文字颜色*/
+    gridline-color: black;                              /*表格内框颜色*/
+    background-color: rgb(108, 108, 108);               /*表格内背景色*/
+    alternate-background-color: rgb(64, 64, 64);
+    selection-color: while;                             /*选中区域的文字颜色*/
+    selection-background-color: rgb(77, 77, 77);        /*选中区域的背景色*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 2px 4px;</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="Update">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -200,7 +211,7 @@ QPushButton:pressed{
       <string>修改</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_5">
+    <widget class="QPushButton" name="rmv">
      <property name="geometry">
       <rect>
        <x>180</x>
@@ -236,9 +247,9 @@ QPushButton:pressed{
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>20</x>
        <y>140</y>
-       <width>71</width>
+       <width>91</width>
        <height>31</height>
       </rect>
      </property>
@@ -253,9 +264,9 @@ border-color:rgb(52, 52, 52);</string>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>20</x>
        <y>180</y>
-       <width>71</width>
+       <width>91</width>
        <height>31</height>
       </rect>
      </property>
@@ -270,9 +281,9 @@ border-color:rgb(52, 52, 52);</string>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>20</x>
        <y>220</y>
-       <width>71</width>
+       <width>91</width>
        <height>31</height>
       </rect>
      </property>
@@ -287,9 +298,9 @@ border-color:rgb(52, 52, 52);</string>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>20</x>
        <y>260</y>
-       <width>71</width>
+       <width>91</width>
        <height>31</height>
       </rect>
      </property>
@@ -304,9 +315,9 @@ border-color:rgb(52, 52, 52);</string>
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>20</x>
        <y>300</y>
-       <width>71</width>
+       <width>91</width>
        <height>31</height>
       </rect>
      </property>
@@ -318,7 +329,7 @@ border-color:rgb(52, 52, 52);</string>
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#bababa;&quot;&gt;迟到次数&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="Eno">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -335,8 +346,11 @@ color:rgb(186,186,186);</string>
      <property name="text">
       <string/>
      </property>
+     <property name="placeholderText">
+      <string>必填</string>
+     </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <widget class="QLineEdit" name="attendace_cnt">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -354,7 +368,7 @@ color:rgb(186,186,186);</string>
       <string/>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_4">
+    <widget class="QLineEdit" name="askfor_cnt">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -372,7 +386,7 @@ color:rgb(186,186,186);</string>
       <string/>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_5">
+    <widget class="QLineEdit" name="notin_cnt">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -390,7 +404,7 @@ color:rgb(186,186,186);</string>
       <string/>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_6">
+    <widget class="QLineEdit" name="late_cnt">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -408,7 +422,7 @@ color:rgb(186,186,186);</string>
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_6">
+    <widget class="QPushButton" name="Query">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -441,7 +455,7 @@ QPushButton:pressed{
       <string>查询</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_7">
+    <widget class="QPushButton" name="Add">
      <property name="geometry">
       <rect>
        <x>180</x>
@@ -481,8 +495,8 @@ QPushButton:pressed{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1116</width>
-     <height>23</height>
+     <width>1146</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

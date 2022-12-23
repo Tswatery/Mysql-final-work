@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import *
 from src.choose2 import *
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QCursor
-from Class import depart, employee
+from Class import depart, employee, attendance
 
 class ChooseWindow(QMainWindow,Ui_MainWindow):
     def __init__(self,parent=None):
@@ -12,6 +12,8 @@ class ChooseWindow(QMainWindow,Ui_MainWindow):
         self.depart_win = depart.Department_Window()
         # 员工表
         self.employee_win = employee.Employee_Window()
+        # 出勤表
+        self.attandance_win = attendance.Attendance_Window()
         super(ChooseWindow,self).__init__(parent)
         self.setupUi(self)
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
@@ -26,6 +28,10 @@ class ChooseWindow(QMainWindow,Ui_MainWindow):
         self.employee.clicked.connect(self.employee_win.show)
         self.employee.clicked.connect(self.close)
         self.employee_win.close_button.clicked.connect(self.show)
+        # 出勤表
+        self.attandance.clicked.connect(self.attandance_win.show)
+        self.attandance.clicked.connect(self.close)
+        self.attandance_win.close_button.clicked.connect(self.show)
 
     # 移动
     def mousePressEvent(self, event):

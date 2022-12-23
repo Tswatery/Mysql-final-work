@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1115</width>
-    <height>785</height>
+    <width>375</width>
+    <height>654</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>1101</width>
-      <height>621</height>
+      <x>0</x>
+      <y>0</y>
+      <width>371</width>
+      <height>611</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -41,7 +41,7 @@ background-color: rgb(52, 52, 52);
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>40</x>
        <y>40</y>
        <width>291</width>
        <height>61</height>
@@ -58,7 +58,7 @@ border-color:rgb(52, 52, 52)</string>
     <widget class="QPushButton" name="hidden_button">
      <property name="geometry">
       <rect>
-       <x>1030</x>
+       <x>290</x>
        <y>10</y>
        <width>31</width>
        <height>31</height>
@@ -90,7 +90,7 @@ QPushButton:pressed{
     <widget class="QPushButton" name="close_button">
      <property name="geometry">
       <rect>
-       <x>1060</x>
+       <x>330</x>
        <y>10</y>
        <width>31</width>
        <height>31</height>
@@ -119,20 +119,10 @@ QPushButton:pressed{
       <string>×</string>
      </property>
     </widget>
-    <widget class="QTableView" name="tableView">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>50</y>
-       <width>741</width>
-       <height>531</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QPushButton" name="depart">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>90</x>
        <y>120</y>
        <width>191</width>
        <height>61</height>
@@ -165,7 +155,7 @@ QPushButton:pressed{
     <widget class="QPushButton" name="employee">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>90</x>
        <y>220</y>
        <width>191</width>
        <height>61</height>
@@ -198,7 +188,7 @@ QPushButton:pressed{
     <widget class="QPushButton" name="attandance">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>90</x>
        <y>320</y>
        <width>191</width>
        <height>61</height>
@@ -231,7 +221,7 @@ QPushButton:pressed{
     <widget class="QPushButton" name="leave">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>90</x>
        <y>420</y>
        <width>191</width>
        <height>61</height>
@@ -264,7 +254,7 @@ QPushButton:pressed{
     <widget class="QPushButton" name="salary">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>90</x>
        <y>520</y>
        <width>191</width>
        <height>61</height>
@@ -301,7 +291,7 @@ QPushButton:pressed{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1115</width>
+     <width>375</width>
      <height>26</height>
     </rect>
    </property>
