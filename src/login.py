@@ -36,7 +36,7 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.button_login = QtWidgets.QPushButton(self.frame)
-        self.button_login.setGeometry(QtCore.QRect(90, 300, 161, 41))
+        self.button_login.setGeometry(QtCore.QRect(90, 280, 161, 41))
         self.button_login.setStyleSheet("QPushButton{\n"
 "    font: 20pt \"微软雅黑\";\n"
 "    \n"
@@ -174,6 +174,27 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.button_close.setObjectName("button_close")
+        self.button_signup = QtWidgets.QPushButton(self.frame)
+        self.button_signup.setGeometry(QtCore.QRect(90, 330, 161, 41))
+        self.button_signup.setStyleSheet("QPushButton{\n"
+"    font: 20pt \"微软雅黑\";\n"
+"    \n"
+"    background-color: rgb(0, 0, 0);\n"
+"    color: rgb(255, 255, 255);\n"
+"    border: 3px solid rgb(0,0,0);\n"
+"    border-radius:10px\n"
+"}\n"
+"QPushButton:hover{\n"
+"    \n"
+"    color: rgb(0, 0, 0);\n"
+"    background-color: rgb(255, 255, 255);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px\n"
+"}\n"
+"")
+        self.button_signup.setObjectName("button_signup")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 368, 26))
@@ -195,3 +216,4 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" color:#ffffff;\">登录界面</span></p></body></html>"))
         self.button_hidden.setText(_translate("MainWindow", "－"))
         self.button_close.setText(_translate("MainWindow", "×"))
+        self.button_signup.setText(_translate("MainWindow", "注册"))

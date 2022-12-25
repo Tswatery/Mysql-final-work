@@ -1,3 +1,5 @@
+import pymysql
+
 from database import connect_login
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -5,7 +7,7 @@ from PyQt5.QtWidgets import *
 from src.login import *
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QCursor
-from Class import choose
+from Class import choose, depart, attendance
 
 class MainWindows(QMainWindow,Ui_MainWindow):
     def __init__(self,parent=None):
@@ -15,9 +17,12 @@ class MainWindows(QMainWindow,Ui_MainWindow):
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.button_close.clicked.connect(self.close)
         self.button_hidden.clicked.connect(self.showMinimized)
+        self.Mysql = connect_login.MysqlOp()
+        # 选择
         self.choose_win = choose.ChooseWindow()
         self.button_login.clicked.connect(self.is_login)
-        self.choose_win.close_button.clicked.connect(self.show)
+        # 注册
+        self.button_signup.clicked.connect(self.signup)
 
     def mousePressEvent(self, event):
         if event.button() == Qt.LeftButton:
@@ -52,3 +57,20 @@ class MainWindows(QMainWindow,Ui_MainWindow):
                 break
         if not flag_login_success:
             QMessageBox.information(self, '提示', '用户密码错误')
+
+    def signup(self):
+        self.Mysql.get_connect()
+        cursor = self.Mysql.conn.cursor()
+        name, pwd = self.user_lineEdit.text(), self.password_lineEdit.text()
+        # 测试name和pwd是否成功读入
+        print(f'name是{name}，pwd是{pwd}')
+        sql = 'insert into user_pwd values ("{0}", "{1}")'.format(name, pwd)
+        print(sql)
+        try:
+            cursor.execute(sql)
+            self.Mysql.conn.commit()
+            cursor.close()
+        except pymysql.Error as e:
+            print(e)
+            return
+        QMessageBox.information(self, '提示', f'注册成功')
