@@ -18,7 +18,7 @@ class Employee_Window(QMainWindow,Ui_MainWindow):
         self.close_button.clicked.connect(self.close)
         self.hidden_button.clicked.connect(self.showMinimized)
         # 设置表格
-        self.model = QStandardItemModel(200,2)
+        self.model = QStandardItemModel(200,3)
         self.model.setHorizontalHeaderLabels(['员工编号', '员工名称', '所属系'])
         self.tableView.setModel(self.model)
         self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)

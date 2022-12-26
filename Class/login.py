@@ -21,6 +21,7 @@ class MainWindows(QMainWindow,Ui_MainWindow):
         # 选择
         self.choose_win = choose.ChooseWindow()
         self.button_login.clicked.connect(self.is_login)
+        self.choose_win.close_button.clicked.connect(self.show)
         # 注册
         self.button_signup.clicked.connect(self.signup)
 
@@ -72,5 +73,6 @@ class MainWindows(QMainWindow,Ui_MainWindow):
             cursor.close()
         except pymysql.Error as e:
             print(e)
+            QMessageBox.information(self, '提示', f'注册失败 该用户名已被注册！')
             return
         QMessageBox.information(self, '提示', f'注册成功')
